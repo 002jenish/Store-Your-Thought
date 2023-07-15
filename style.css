@@ -1,0 +1,294 @@
+/* Reset default margins and paddings */
+h1, h2, ul, li, textarea, select, input {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body{
+    padding-top: 3%;
+  }
+  /* Set a background color and font styles */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    color: #333;
+    font-size: 18px;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+  }
+  
+  h1 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+  }
+  
+  h2 {
+    font-size: 26px;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  #note-form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  
+  #note-input,
+  #new-playlist-input {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 20px;
+    font-family: monospace; 
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    }
+  
+  #playlist-select {
+    width: 100%;
+    height: 30px;
+    margin-bottom: 10px;
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  button {
+    display: block;
+    margin: 10px 0;
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  #groups-list,
+  #notes-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .note-item {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    border-radius: 3px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .note-item:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .note-timestamp {
+    color: #999;
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+  
+  .note-text {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+  
+  #groups-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  #groups-list li {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    background-color: #4caf50;
+    color: #fff;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 22px;
+    transition: background-color 0.3s ease;
+  }
+  
+  #groups-list li:hover {
+    background-color: #45a049;
+  }
+  
+  #notes-history {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  #notes-list {
+    margin-top: 10px;
+  }
+  
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 5px;
+  }
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  #group-select-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  #group-select-container input[type="text"] {
+    margin-left: 10px;
+  }
+  
+  /* Additional Enhancements */
+
+
+  #clean-history-btn {
+    display: block;
+    margin-bottom: 10px;
+    padding: 8px 16px;
+    background-color: #f44336;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+  }
+  
+  #clean-history-btn:hover {
+    background-color: #d32f2f;
+  }
+  
+  /* #clean-group-notes-btn {
+    display: block;
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #f44336;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  #clean-group-notes-btn:hover {
+    background-color: #d32f2f;
+  } */
+/* Group and Notes Panels */
+#groups-container {
+    display: flex;
+  }
+  
+  #groups-list {
+    width: 50%;
+    margin-right: 20px;
+    height: 40px;
+  }
+  
+  #group-notes-container {
+    width: 50%;
+  }
+  
+  #group-notes-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .note-item {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    border-radius: 3px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    position: relative;
+  }
+  
+  .note-item:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .note-timestamp {
+    color: #999;
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+  
+  .note-text {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+  
+  #clean-group-notes-btn {
+    display: block;
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #f44336;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+  }
+  
+  #clean-group-notes-btn:hover {
+    background-color: #d32f2f;
+  }
+  

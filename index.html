@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Store Your Thoughts</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Store Your Curious Mind</h1>
+        <div id="note-container">
+    <h2>Create a Note</h2>
+    <form id="note-form">
+        <textarea id="note-input" placeholder="Write your note here"></textarea>
+        <input type="text" id="new-playlist-input" placeholder="Create an group">
+        <button type="submit">Save Note</button>
+    </form>
+    </div>
+
+    <div id="groups-container">
+        <div id="groups-list">
+          <!-- List of groups will be dynamically added here -->
+        </div>
+        <div id="group-notes-container">
+          <h2>Group Notes</h2>
+          <div id="group-notes-list">
+            <!-- List of notes for the selected group will be dynamically added here -->
+          </div>
+          
+          <div id="delete-options">
+            <label for="delete-all-checkbox">
+              <input type="checkbox" id="delete-all-checkbox">
+              Delete perticular group
+            </label>
+          </div>
+          <button id="clean-group-notes-btn">Clean Group</button>
+        </div>
+      </div>      
+      
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Note Details</h2>
+        <div id="note-details">
+          <!-- Note details will be dynamically added here -->
+        </div>
+        <div id="delete-note-options">
+          <label for="delete-note-checkbox">
+            <input type="checkbox" id="delete-note-checkbox">
+            Delete this note
+          </label>
+        </div>
+        <button id="delete-note-btn">Delete</button>
+
+        <!-- <span class="close">&times;</span> -->
+        <h2 id="modal-title"></h2>
+        <ul id="modal-notes-list"></ul>
+      </div>
+    </div>
+    <div id="notes-history">
+        <h2>Notes History</h2>
+        <button id="clean-history-btn">Clean History</button>
+        <ul id="notes-list">
+          <!-- List of notes will be dynamically added here -->
+        </ul>
+      </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
