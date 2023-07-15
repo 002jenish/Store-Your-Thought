@@ -9,4 +9,4 @@ You can connect database using MySQL to store the notes in databse, I don't inte
 In future i will defently do it.
 
 You can see this in website that I have Hosted
-https://github.com/002jenish/https://002jenish.github.io/Store-Your-Thought/
+https://002jenish.github.io/Store-Your-Thought/
